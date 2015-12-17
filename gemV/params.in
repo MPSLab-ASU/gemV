@@ -1,0 +1,8 @@
+# Vul parameters file. No white spaces.
+rob=false
+registerfile=true
+cache=false
+iq=false
+lsq=false
+pipeline=false
+rename=false

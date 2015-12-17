@@ -1,0 +1,16 @@
+
+Tracking versions for GemV
+
+Components are incremental - Version contains components from all previous versions.
+
+Version             Components                  Comments
+=======             =========                   ===========================================
+v0.1                Cache                       Initial configuration, cache partially done
+v0.11               Cache                       With Parity Block
+v0.2                Cache, tags                 Cache - all protection models, tag vulnerability
+                                                done and tested.
+v0.3                TLB                         TLB Vulnerability done. FS testing required.
+v0.4                Register File               Register File done (CC registers not included).
+v0.5                IQ, LSQ                     Issue queue and Load/Store Queue done
+v0.8                All                         Pre-pipeline all components done
+                                                and working.
