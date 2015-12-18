@@ -16,12 +16,6 @@ Currently, GemV is modeled around the ARM ISA implementation of gem5.
 It should also work for other ISAs, however vulnerability numbers will 
 be incorrect for TLBs and pipeline registers.
 
-Version Information
----------------------------
-
-gemV-1.0.R[July 30, 2014]  -  Release version of the gemV simulator with vulnerability 
-                              computation for processor core components and caches. 
-
 Pre-requisites
 ---------------
 
