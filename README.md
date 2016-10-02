@@ -48,8 +48,7 @@ Running the gemV Simulator:
 
 Example of a command line to run gemV with vulnerability analysis enabled and Parity Word protection on the cache.
 
-build/ARM/gem5.opt -re configs/example/se.py --cpu-type=arm_detailed --caches --vul_analysis=yes --vul_params=<path-to-params.in>
---cache_prot=parity_word -c <Full path to binary> <benchmark command-line inputs>
+build/ARM/gem5.opt -re configs/example/se.py --cpu-type=arm_detailed --caches --vul_analysis=yes --vul_params=[path-to-params.in] --cache_prot=parity_word -c [Full path to binary] -o [benchmark command-line inputs]
 
 
 Parameters:
