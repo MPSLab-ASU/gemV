@@ -2,7 +2,7 @@
 Updated version with dyn_inst vulnerability modelling.
 
 About
----------------------------
+-----
 gemV is an extension to the popular gem5 multicore simulation framework. 
 gemV includes support for measuring the vulnerability against soft errors 
 of the execution of a program on a processor architecture. Vulnerability is 
