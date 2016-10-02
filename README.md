@@ -60,15 +60,10 @@ vul_analysis=[yes/no]
 	    Options (in 'params.in'):
 	    
 		       rob=[true/false] – Analyze vulnerability of reorder buffer
-		       
 		       registerfile=[true/false] - Analyze vulnerability of register file
-		       
 		       cache=[true/false] - Analyze vulnerability of cache
-		       
 		       iq=[true/false] - Analyze vulnerability of instruction queue
-		       
 		       lsq=[true/false] - Analyze vulnerability of load/store queue
-		       
 		       pipeline=[true/false] - Analyze vulnerability of pipeline registers
 		       rename=[true/false] - Analyze vulnerability of renaming unit such as history buffer and rename map
 
@@ -79,10 +74,8 @@ cache_prot=[no_protection/parity_word/parity_block]	:
 	    Options:
 	    
 		       parity_block 	- With 'one parity bit' for the entire cache-line (block).
-		       
 		       parity_word  	- With 'one parity bit' for each cache word. (Number of parity 
                                   bits in a cache-line is equal to the number of words in the cache-line.)
-				  
 		       no_protection	- No protection policy applied on the cache blocks.
 
 Output:
