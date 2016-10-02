@@ -2,7 +2,7 @@
 Updated version with dyn_inst vulnerability modelling.
 
 About
----------------------------
+-----
 gemV is an extension to the popular gem5 multicore simulation framework. 
 gemV includes support for measuring the vulnerability against soft errors 
 of the execution of a program on a processor architecture. Vulnerability is 
@@ -48,18 +48,30 @@ Running the gemV Simulator:
 
 Example of a command line to run gemV with vulnerability analysis enabled and Parity Word protection on the cache.
 
-build/ARM/gem5.opt -re configs/example/se.py --cpu-type=arm_detailed --caches --vul_analysis=yes 
---cache_prot=parity_word -c <Full path to binary> <benchmark command-line inputs>
+build/ARM/gem5.opt -re configs/example/se.py --cpu-type=arm_detailed --caches --vul_analysis=yes --vul_params=[path-to-params.in] --cache_prot=parity_word -c [Full path to binary] -o [benchmark command-line inputs]
 
 
 Parameters:
 -----------
 vul_analysis=[yes/no] 
-        To enable or disable vulnerability analysis and output in the simulator.
+        To enable or disable vulnerability analysis and output in the simulator. Also need to make ‘params.in’ text file to analyze vulnerability of each component.
+
+	    Options (in 'params.in'):
+	    
+		       rob=[true/false] – Analyze vulnerability of reorder buffer
+		       registerfile=[true/false] - Analyze vulnerability of register file
+		       cache=[true/false] - Analyze vulnerability of cache
+		       iq=[true/false] - Analyze vulnerability of instruction queue
+		       lsq=[true/false] - Analyze vulnerability of load/store queue
+		       pipeline=[true/false] - Analyze vulnerability of pipeline registers
+		       rename=[true/false] - Analyze vulnerability of renaming unit such as history buffer and rename map
+
 
 cache_prot=[no_protection/parity_word/parity_block]	:   
         Input that specifies the protection policy applied on the cache blocks.
+	
 	    Options:
+	    
 		       parity_block 	- With 'one parity bit' for the entire cache-line (block).
 		       parity_word  	- With 'one parity bit' for each cache word. (Number of parity 
                                   bits in a cache-line is equal to the number of words in the cache-line.)
@@ -68,7 +80,9 @@ cache_prot=[no_protection/parity_word/parity_block]	:
 Output:
 -------
 m5out/simout 	-	gem5 Simulator output information (no gemV specific information output here)
+
 m5out/simerr	- 	gem5 Simulator error output (no gemV specific information output here)
+
 m5out/stats.txt	-	Simulator output stats file. 
 			The vulnerability statistics of the processor components are output here, in the same format as that of gem5.
 
