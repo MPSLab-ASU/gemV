@@ -60,15 +60,20 @@ vul_analysis=[yes/no]
 cache_prot=[no_protection/parity_word/parity_block]	:   
         Input that specifies the protection policy applied on the cache blocks.
 	    Options:
+	    
 		       parity_block 	- With 'one parity bit' for the entire cache-line (block).
+		       
 		       parity_word  	- With 'one parity bit' for each cache word. (Number of parity 
                                   bits in a cache-line is equal to the number of words in the cache-line.)
+				  
 		       no_protection	- No protection policy applied on the cache blocks.
 
 Output:
 -------
 m5out/simout 	-	gem5 Simulator output information (no gemV specific information output here)
+
 m5out/simerr	- 	gem5 Simulator error output (no gemV specific information output here)
+
 m5out/stats.txt	-	Simulator output stats file. 
 			The vulnerability statistics of the processor components are output here, in the same format as that of gem5.
 
